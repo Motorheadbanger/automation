@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace IsNumber
+namespace ParseNumber
 {
-    public class IsNumberClass
+    public class ParseNumberClass
     {
         public static double ParseNumber(String input)
         {

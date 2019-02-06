@@ -1,5 +1,5 @@
 ﻿using System;
-using IsNumber;
+using ParseNumber;
 
 namespace Task1
 {
@@ -9,15 +9,15 @@ namespace Task1
         {
             Console.Write("Specify the first number: ");
             string firstInput = Console.ReadLine();
-            double x = IsNumberClass.ParseNumber(firstInput);
+            double x = ParseNumberClass.ParseNumber(firstInput);
 
             Console.Write("Specify the second number: ");
             string secondInput = Console.ReadLine();
-            double y = IsNumberClass.ParseNumber(secondInput);
+            double y = ParseNumberClass.ParseNumber(secondInput);
 
             Console.Write("Specify the third number: ");
             string thirdInput = Console.ReadLine();
-            double z = IsNumberClass.ParseNumber(thirdInput);
+            double z = ParseNumberClass.ParseNumber(thirdInput);
 
             Console.WriteLine("First expression result: " + (x + y) * (z * z - 1));
             Console.WriteLine("Second expression result: " + (x % z - 1) * Math.Sqrt((double)y));

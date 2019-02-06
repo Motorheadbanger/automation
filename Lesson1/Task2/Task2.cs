@@ -1,5 +1,5 @@
 ﻿using System;
-using IsNumber;
+using ParseNumber;
 
 namespace Task2
 {
@@ -9,15 +9,15 @@ namespace Task2
         {
             Console.Write("Specify width: ");
             string widthInput = Console.ReadLine();
-            double width = IsNumberClass.ParseNumber(widthInput);
+            double width = ParseNumberClass.ParseNumber(widthInput);
 
             Console.Write("Specify height: ");
             string heightInput = Console.ReadLine();
-            double height = IsNumberClass.ParseNumber(heightInput);
+            double height = ParseNumberClass.ParseNumber(heightInput);
 
             Console.Write("Specify depth: ");
             string depthInput = Console.ReadLine();
-            double depth = IsNumberClass.ParseNumber(depthInput);
+            double depth = ParseNumberClass.ParseNumber(depthInput);
 
             double result = Math.Sqrt(((width * width) + (height * height)) + (depth * depth));
             Console.WriteLine("Parallelepiped diagonal length: " + result);
