@@ -9,9 +9,9 @@ namespace Task3
             Console.WriteLine("Specify the first line: ");
             string firstLine = Console.ReadLine().ToUpper();
             Console.WriteLine("Specify the second line: ");
-            String secondLine = Console.ReadLine().ToUpper();
+            string secondLine = Console.ReadLine().ToUpper();
             Console.WriteLine("Specify the third line: ");
-            String thirdLine = Console.ReadLine().ToUpper();
+            string thirdLine = Console.ReadLine().ToUpper();
 
             Console.WriteLine("String " + firstLine + " starts from " + secondLine + ": " + firstLine.StartsWith(secondLine));
             Console.WriteLine("String " + firstLine + " ends with " + thirdLine + ": " + firstLine.EndsWith(thirdLine));

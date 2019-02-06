@@ -8,15 +8,15 @@ namespace Task2
         static void Main(string[] args)
         {
             Console.Write("Specify width: ");
-            String widthInput = Console.ReadLine();
+            string widthInput = Console.ReadLine();
             double width = IsNumberClass.ParseNumber(widthInput);
 
             Console.Write("Specify height: ");
-            String heightInput = Console.ReadLine();
+            string heightInput = Console.ReadLine();
             double height = IsNumberClass.ParseNumber(heightInput);
 
             Console.Write("Specify depth: ");
-            String depthInput = Console.ReadLine();
+            string depthInput = Console.ReadLine();
             double depth = IsNumberClass.ParseNumber(depthInput);
 
             double result = Math.Sqrt(((width * width) + (height * height)) + (depth * depth));

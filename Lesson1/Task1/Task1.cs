@@ -8,15 +8,15 @@ namespace Task1
         static void Main(string[] args)
         {
             Console.Write("Specify the first number: ");
-            String firstInput = Console.ReadLine();
+            string firstInput = Console.ReadLine();
             double x = IsNumberClass.ParseNumber(firstInput);
 
             Console.Write("Specify the second number: ");
-            String secondInput = Console.ReadLine();
+            string secondInput = Console.ReadLine();
             double y = IsNumberClass.ParseNumber(secondInput);
 
             Console.Write("Specify the third number: ");
-            String thirdInput = Console.ReadLine();
+            string thirdInput = Console.ReadLine();
             double z = IsNumberClass.ParseNumber(thirdInput);
 
             Console.WriteLine("First expression result: " + (x + y) * (z * z - 1));
