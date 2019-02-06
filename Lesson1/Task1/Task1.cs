@@ -1,20 +1,24 @@
 ﻿using System;
+using IsNumber;
 
 namespace Task1
 {
-    class Program
+    class Task1
     {
         static void Main(string[] args)
         {
             Console.Write("Specify the first number: ");
             String firstInput = Console.ReadLine();
-            double x = ParseNumber(firstInput);
+            double x = IsNumberClass.ParseNumber(firstInput);
+
             Console.Write("Specify the second number: ");
             String secondInput = Console.ReadLine();
-            double y = ParseNumber(secondInput);
+            double y = IsNumberClass.ParseNumber(secondInput);
+
             Console.Write("Specify the third number: ");
             String thirdInput = Console.ReadLine();
-            double z = ParseNumber(thirdInput);
+            double z = IsNumberClass.ParseNumber(thirdInput);
+
             Console.WriteLine("First expression result: " + (x + y) * (z * z - 1));
             Console.WriteLine("Second expression result: " + (x % z - 1) * Math.Sqrt((double)y));
             Console.WriteLine("Third expression result: " + ((x * y) + (y * z)) / (z * z * z));
@@ -22,20 +26,6 @@ namespace Task1
             Console.ReadKey();
         }
 
-        private static double ParseNumber(String input)
-        {
-            double result;
-            bool isNumber = false;
-            do
-            {
-                isNumber = Double.TryParse(input, out result);
-                if (!isNumber)
-                {
-                    Console.Write("Not a number. Try again: ");
-                    input = Console.ReadLine();
-                }
-            } while (!isNumber);
-            return result;
-        }
+        
     }
 }
