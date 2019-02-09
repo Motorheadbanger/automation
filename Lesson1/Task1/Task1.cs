@@ -19,9 +19,9 @@ namespace Task1
             string thirdInput = Console.ReadLine();
             double z = ParseNumberClass.ParseNumber(thirdInput);
 
-            Console.WriteLine("First expression result: " + (x + y) * (z * z - 1));
-            Console.WriteLine("Second expression result: " + (x % z - 1) * Math.Sqrt((double)y));
-            Console.WriteLine("Third expression result: " + ((x * y) + (y * z)) / (z * z * z));
+            Console.WriteLine($"First expression result: {(x + y) * (z * z - 1)}");
+            Console.WriteLine($"Second expression result: {(x % z - 1) * Math.Sqrt(y)}");
+            Console.WriteLine($"Third expression result: {(x * y + y * z) / (z * z * z)}");
             Console.Write("Press any key to exit.");
             Console.ReadKey();
         }

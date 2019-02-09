@@ -19,7 +19,7 @@ namespace Task2
             string depthInput = Console.ReadLine();
             double depth = ParseNumberClass.ParseNumber(depthInput);
 
-            double result = Math.Sqrt(((width * width) + (height * height)) + (depth * depth));
+            double result = Math.Sqrt((width * width + height * height) + depth * depth);
             Console.WriteLine("Parallelepiped diagonal length: " + result);
             Console.Write("Press any key to exit.");
             Console.ReadKey();
