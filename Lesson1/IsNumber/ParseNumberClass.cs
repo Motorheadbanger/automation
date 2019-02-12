@@ -6,9 +6,9 @@ namespace ParseNumber
     {
         public static double ParseNumber(String input)
         {
-            double result;
+            double result = 0.0;
             bool isNumber = false;
-            do
+            while (!isNumber)
             {
                 isNumber = Double.TryParse(input, out result);
                 if (!isNumber)
@@ -16,7 +16,8 @@ namespace ParseNumber
                     Console.Write("Not a number. Try again: ");
                     input = Console.ReadLine();
                 }
-            } while (!isNumber);
+            }
+
             return result;
         }
     }
