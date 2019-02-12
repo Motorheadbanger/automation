@@ -13,8 +13,8 @@ namespace Task3
             Console.WriteLine("Specify the third line: ");
             string thirdLine = Console.ReadLine().ToUpper();
 
-            Console.WriteLine("String " + firstLine + " starts from " + secondLine + ": " + firstLine.StartsWith(secondLine));
-            Console.WriteLine("String " + firstLine + " ends with " + thirdLine + ": " + firstLine.EndsWith(thirdLine));
+            Console.WriteLine($"String {firstLine} starts from {secondLine}: {firstLine.StartsWith(secondLine)}");
+            Console.WriteLine($"String {firstLine} ends with {thirdLine}: {firstLine.EndsWith(thirdLine)}");
             Console.Write("Press any key to exit.");
             Console.ReadKey();
         }
