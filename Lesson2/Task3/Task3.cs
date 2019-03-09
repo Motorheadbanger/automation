@@ -20,47 +20,35 @@ namespace Task3
             switch (operation)
             {
                 case '+' :
-                    {
-                        result = firstNumber + secondNumber;
-                        Output(result);
-                        break;
-                    }
+                    result = firstNumber + secondNumber;
+                    Output(result);
+                    break;
                 case '-':
-                    {
-                        result = firstNumber - secondNumber;
-                        Output(result);
-                        break;
-                    }
+                    result = firstNumber - secondNumber;
+                    Output(result);
+                    break;
                 case '*':
-                    {
-                        result = firstNumber * secondNumber;
-                        Output(result);
-                        break;
-                    }
+                    result = firstNumber * secondNumber;
+                    Output(result);
+                    break;
                 case '/':
+                    if (secondNumber == 0)
                     {
-                        if (secondNumber == 0)
-                        {
-                            Console.WriteLine("Error: cannot divide by zero. Exiting...");
-                        }
-                        else
-                        {
-                            result = firstNumber / secondNumber;
-                            Output(result);
-                        }
-                        break;
+                        Console.WriteLine("Error: cannot divide by zero. Exiting...");
                     }
-                case '^':
+                    else
                     {
-                        result = Math.Pow(firstNumber, secondNumber);
+                        result = firstNumber / secondNumber;
                         Output(result);
-                        break;
                     }
+                    break;
+                case '^':
+                    result = Math.Pow(firstNumber, secondNumber);
+                    Output(result);
+                    break;
                 default: 
-                    {
-                        Console.WriteLine("Error: unknown operation. Exiting...");
-                        break;
-                    }
+                    Console.WriteLine("Error: unknown operation. Exiting...");
+                    break;
             }
 
             Console.ReadKey();
