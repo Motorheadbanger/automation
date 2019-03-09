@@ -9,7 +9,8 @@ namespace Task2
 
         static void Main(string[] args)
         {
-            for (int attemptsLeft = 2; attemptsLeft >= 0; attemptsLeft--)
+            int attemptsLeft = 3;
+            while (attemptsLeft > 0)
             {
                 Console.Write("Login: ");
                 userLogin = Console.ReadLine();
@@ -23,6 +24,7 @@ namespace Task2
                 }
                 else
                 {
+                    attemptsLeft--;
                     if (attemptsLeft > 0)
                     {
                         userPassword = "";
