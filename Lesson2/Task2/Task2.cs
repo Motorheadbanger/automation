@@ -6,10 +6,8 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-            const string existingLogin = "Login";
-            const string existingPassword = "Password";
-            string userLogin = "";
-            string userPassword = "";
+            const string existingLogin = "Login", existingPassword = "Password";
+            string userLogin = "", userPassword = "";
 
             for (int attemptsLeft = 2; attemptsLeft >= 0; attemptsLeft--)
             {
