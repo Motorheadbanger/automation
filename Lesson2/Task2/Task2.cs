@@ -4,25 +4,17 @@ namespace Task2
 {
     class Task2
     {
+        const string existingLogin = "Login", existingPassword = "Password";
+        static string userLogin = "", userPassword = "";
+
         static void Main(string[] args)
         {
-            const string existingLogin = "Login", existingPassword = "Password";
-            string userLogin = "", userPassword = "";
-
             for (int attemptsLeft = 2; attemptsLeft >= 0; attemptsLeft--)
             {
                 Console.Write("Login: ");
                 userLogin = Console.ReadLine();
                 Console.Write("Password: ");
-                ConsoleKeyInfo key = Console.ReadKey(true);
-
-                while (key.Key != ConsoleKey.Enter)
-                {
-                    Console.Write("*");
-                    userPassword += key.KeyChar;
-                    key = Console.ReadKey(true);
-                }
-                Console.WriteLine();
+                ReadPassword();
 
                 if (existingLogin.Equals(userLogin) && existingPassword.Equals(userPassword))
                 {
@@ -33,7 +25,6 @@ namespace Task2
                 {
                     if (attemptsLeft > 0)
                     {
-                        userLogin = "";
                         userPassword = "";
                         Console.WriteLine($"Login unsuccessful. You have {attemptsLeft} attempts left. Please try again...");
                     }
@@ -41,6 +32,19 @@ namespace Task2
                 }
             }
             Console.ReadKey();
+        }
+
+        private static void ReadPassword()
+        {
+            ConsoleKeyInfo key = Console.ReadKey(true);
+
+            while (key.Key != ConsoleKey.Enter)
+            {
+                Console.Write("*");
+                userPassword += key.KeyChar;
+                key = Console.ReadKey(true);
+            }
+            Console.WriteLine();
         }
     }
 }
